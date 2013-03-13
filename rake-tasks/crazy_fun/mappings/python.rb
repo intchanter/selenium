@@ -128,6 +128,7 @@ module Python
       else
         py_test = 'py.test'
       end
+      py_test += ' ' + ENV['pytestopts'] if ENV['pytestopts']
     end
 
     def copy_source_to_env
